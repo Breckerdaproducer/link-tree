@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brecker da Producer - Clean</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap");
+
+      .producer-name {
+        font-family: "Inter", sans-serif;
+        background: linear-gradient(
+          90deg,
+          #ffffff 0%,
+          #a855f7 50%,
+          #ffffff 100%
+        );
+        background-size: 200% 100%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: slideIn 1.2s ease-out, shimmer 3s ease-in-out infinite 1s;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+      }
+
+      .producer-name:hover {
+        transform: scale(1.05);
+      }
+
+      @keyframes slideIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes shimmer {
+        0%,
+        100% {
+          background-position: -200% 0;
+        }
+        50% {
+          background-position: 200% 0;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-black min-h-screen flex items-center justify-center">
+    <h1 class="producer-name text-3xl font-bold mb-2 tracking-tight">
+      Brecker_da_Producer
+    </h1>
+  </body>
+</html>
